@@ -1,0 +1,42 @@
+.listItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+
+  border: 2px solid #333333;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.test {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  column-gap: 5px;
+}
+
+.phoneInfo {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  column-gap: 5px;
+}
+
+.deleteButton {
+  width: 100px;
+  padding: 10px;
+  border-radius: 5px;
+
+  transition: background-color 250ms ease-in-out;
+}
+.deleteButton:hover,
+.deleteButton:focus {
+  background-color: rgba(255, 0, 0, 0.644);
+}
