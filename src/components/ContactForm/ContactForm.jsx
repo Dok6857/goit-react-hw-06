@@ -52,43 +52,4 @@ export const ContactForm = () => {
       </Form>
     </Formik>
   );
-
-
-  // return (
-  //   <Formik
-  //     initialValues={{
-  //       id: '',
-  //       name: '',
-  //       number: '',
-  //     }}
-  //     onSubmit={handleSubmit}
-  //     validationSchema={FeedbackSchema}
-  //   >
-  //     <Form className={css.form}>
-  //       <label htmlFor={nameFieldID}>
-  //         Name
-  //         <Field
-  //           className={css.inputFields}
-  //           id={nameFieldID}
-  //           type="text"
-  //           name="name"
-  //         ></Field>
-  //         <ErrorMessage className={css.error} name="name" component="span" />
-  //       </label>
-
-  //       <label htmlFor={numberFieldID}>
-  //         Number
-  //         <Field
-  //           className={css.inputFields}
-  //           id={numberFieldID}
-  //           type="tel"
-  //           name="number"
-  //         ></Field>
-  //         <ErrorMessage className={css.error} name="number" component="span" />
-  //       </label>
-
-  //       <button type="submit">Add contact</button>
-  //     </Form>
-  //   </Formik>
-  // );
 };

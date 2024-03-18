@@ -1,10 +1,17 @@
+// ContactList.jsx
 import css from './ContactList.module.css';
 import { Contact } from '../Contact/Contact';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectContacts, deleteContact } from '../../redux/contactsSlice';
+import { selectNameFilter } from '../../redux/filtersSlice';
 
 export const ContactList = () => {
   const contacts = useSelector(selectContacts);
+  const filter = useSelector(selectNameFilter);
+
+  const filteredContacts = contacts.filter(contact =>
+    contact.name.toLowerCase().includes(filter.toLowerCase())
+  );
   const dispatch = useDispatch();
 
   const handleDelete = id => {
@@ -13,20 +20,10 @@ export const ContactList = () => {
 
   return (
     <ul className={css.contactList}>
-      {contacts.map(contact => (
+      {filteredContacts.map(contact => (
         <Contact key={contact.id} contact={contact} onDelete={() => handleDelete(contact.id)} />
       ))}
     </ul>
   );
 };
-
-// export const ContactList = ({ contacts, onDelete }) => {
-//   return (
-//     <ul className={css.contactList}>
-//       {contacts.map(contact => (
-//         <Contact key={contact.id} contact={contact} onDelete={() => {onDelete(contact.id)}} />
-//       ))}
-//     </ul>
-//   );
-// };
 
