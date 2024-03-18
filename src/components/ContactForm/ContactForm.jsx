@@ -40,14 +40,17 @@ export const ContactForm = () => {
       validationSchema={FeedbackSchema}
     >
       <Form className={css.form}>
-        <label htmlFor="name">Name</label>
-        <Field className={css.inputFields} id="name" name="name" />
-        <ErrorMessage className={css.error} name="name" component="div" />
+        <label htmlFor="name">
+          Name
+          <Field className={css.inputFields} id="name" name="name" />
+          <ErrorMessage className={css.error} name="name" component="div" />
+        </label>
 
-        <label htmlFor="number">Number</label>
-        <Field className={css.inputFields} id="number" name="number" />
-        <ErrorMessage className={css.error} name="number" component="div" />
-
+        <label htmlFor="number">
+          Number
+          <Field className={css.inputFields} id="number" name="number" />
+          <ErrorMessage className={css.error} name="number" component="div" />
+        </label>
         <button type="submit">Add contact</button>
       </Form>
     </Formik>
